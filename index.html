@@ -189,14 +189,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -227,6 +227,146 @@
       
 
       
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhichengshi.github.io/2021/01/29/docker%E6%93%8D%E4%BD%9C%E5%90%84%E7%A7%8D%E8%BD%AF%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="史志成">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="learning blog">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/29/docker%E6%93%8D%E4%BD%9C%E5%90%84%E7%A7%8D%E8%BD%AF%E4%BB%B6/" class="post-title-link" itemprop="url">docker操作各种软件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-01-29 21:23:17 / 修改时间：21:23:48" itemprop="dateCreated datePublished" datetime="2021-01-29T21:23:17+08:00">2021-01-29</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="1、MySQL"><a href="#1、MySQL" class="headerlink" title="1、MySQL"></a>1、MySQL</h4><h5 id="1-1-下载"><a href="#1-1-下载" class="headerlink" title="1.1 下载"></a>1.1 下载</h5><p><code>docker pull mysql:5.7</code></p>
+<h5 id="1-2-创建实例并启动"><a href="#1-2-创建实例并启动" class="headerlink" title="1.2 创建实例并启动"></a>1.2 创建实例并启动</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 3306:3306 --name mysql \</span><br><span class="line">-v &#x2F;Users&#x2F;cheng&#x2F;mydata&#x2F;mysql&#x2F;log:&#x2F;var&#x2F;log&#x2F;mydata \</span><br><span class="line">-v &#x2F;Users&#x2F;cheng&#x2F;mydata&#x2F;mysql&#x2F;data:&#x2F;var&#x2F;lib&#x2F;mysql \</span><br><span class="line">-v &#x2F;Users&#x2F;cheng&#x2F;mydata&#x2F;mysql&#x2F;conf:&#x2F;etc&#x2F;mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD&#x3D;cheng \</span><br><span class="line">-d mysql:5.7</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、Redis"><a href="#2、Redis" class="headerlink" title="2、Redis"></a>2、Redis</h4><h5 id="2-1-下载"><a href="#2-1-下载" class="headerlink" title="2.1 下载"></a>2.1 下载</h5><p><code>docker pull redis</code></p>
+<h5 id="2-2-创建实例并启动"><a href="#2-2-创建实例并启动" class="headerlink" title="2.2 创建实例并启动"></a>2.2 创建实例并启动</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mkdir &#x2F;Users&#x2F;cheng&#x2F;mydata&#x2F;redis&#x2F;data</span><br><span class="line">touch &#x2F;Users&#x2F;cheng&#x2F;mydata&#x2F;redis&#x2F;conf&#x2F;redis.conf</span><br><span class="line"></span><br><span class="line">docker run -p 6379:6379 --name redis \</span><br><span class="line">-v &#x2F;Users&#x2F;cheng&#x2F;mydata&#x2F;redis&#x2F;data:&#x2F;data \</span><br><span class="line">-v &#x2F;Users&#x2F;cheng&#x2F;mydata&#x2F;redis&#x2F;conf&#x2F;redis.conf:&#x2F;etc&#x2F;redis&#x2F;redis.conf \</span><br><span class="line">-d redis redis-server &#x2F;etc&#x2F;redis&#x2F;redis.conf</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhichengshi.github.io/2021/01/23/mac%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C%E5%90%84%E7%A7%8D%E8%BD%AF%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="史志成">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="learning blog">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/23/mac%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C%E5%90%84%E7%A7%8D%E8%BD%AF%E4%BB%B6/" class="post-title-link" itemprop="url">mac简单操作各种软件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-01-23 17:06:42 / 修改时间：17:15:34" itemprop="dateCreated datePublished" datetime="2021-01-23T17:06:42+08:00">2021-01-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="1、rabbitmq"><a href="#1、rabbitmq" class="headerlink" title="1、rabbitmq"></a>1、rabbitmq</h4><h5 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1 安装"></a>1.1 安装</h5><p><code>brew install rabbitmq</code></p>
+<h5 id="1-2-启动"><a href="#1-2-启动" class="headerlink" title="1.2 启动"></a>1.2 启动</h5><p><code>brew services start rabbitmq</code></p>
+<h5 id="1-3-访问"><a href="#1-3-访问" class="headerlink" title="1.3 访问"></a>1.3 访问</h5><p><code>localhost:15672</code></p>
+<p>默认的用户名密码都是 <code>guest</code></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
       
   
   
